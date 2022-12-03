@@ -36,6 +36,7 @@ class StatusBarController {
     private var accountBalanceText: NSStatusItem?
     private var ethPriceText: NSStatusItem?
     private var nftListText: NSStatusItem?
+    private var sumListText: NSStatusItem?
     
     private var popover: NSPopover
     private var mainMenuPopover: NSPopover
@@ -47,9 +48,6 @@ class StatusBarController {
     
     var clicked: NSStatusItem?
     
-    //  keep track of what we have loaded so far, so we can notify about new events on the hotspots
-    var lastSeenHash: Dictionary<String, String> = Dictionary<String, String>()
-    
     //  styles
     let regularAttribute = [NSAttributedString.Key.font: NSFont.systemFont(ofSize: 10), .foregroundColor: NSColor.darkGray]
     let regularGreenAttribute = [NSAttributedString.Key.font: NSFont.systemFont(ofSize: 10), .foregroundColor: NSColor.darkGray]
@@ -59,6 +57,7 @@ class StatusBarController {
     let fatAttribute: [NSAttributedString.Key: Any] = [.foregroundColor: NSColor.black, NSAttributedString.Key.font: NSFont.boldSystemFont(ofSize: 9), NSAttributedString.Key.kern: 2]
     
     var ethPrice: Double = 0.0
+    var walletsBalance: Double = 0.0
     
     var timer:Timer!
     
@@ -83,19 +82,20 @@ class StatusBarController {
         ethPricePopover.contentSize = NSSize(width: 420, height: 1040)
         ethPricePopover.behavior = NSPopover.Behavior.transient
         
-        // Creating popover for ETH History
+        // Creating popover for NFT
         nftListPopover = NSPopover()
         nftListPopover.contentSize = NSSize(width: 420, height: 1040)
         nftListPopover.behavior = NSPopover.Behavior.transient
         
         //  init status bar items
-//        mainMenuItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
+        //        mainMenuItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         mainMenuItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         mainMenuItem.length = 30
         gweiText = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         accountBalanceText = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         ethPriceText = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         nftListText = statusBar.statusItem(withLength: NSStatusItem.variableLength)
+        sumListText = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         
         //  add icons
         let iconImage = NSImage(named: "logo")
@@ -103,7 +103,6 @@ class StatusBarController {
         mainMenuItem.button?.layer?.contentsGravity = .resizeAspect
         mainMenuItem.button?.layer?.contents = tintedImage(iconImage!, color: NSColor.black)
         mainMenuItem.button?.wantsLayer = true
-        
         
         //  set click handler
         if let mainBarButton = mainMenuItem.button {
@@ -125,8 +124,6 @@ class StatusBarController {
             nftListButton.target = self
         }
         
-//        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: self.mouseEventHandler)
-
         timer = Timer.scheduledTimer(timeInterval: 600, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         updateTime()
     }
@@ -233,6 +230,7 @@ class StatusBarController {
         
         queue.notify(queue: .global()) {
             self.setAccountBalanceText(String(format: "%.4f", s), String(format: "%.2f", s * self.ethPrice))
+            self.walletsBalance = s
         }
     }
     
@@ -328,6 +326,8 @@ class StatusBarController {
         }
         
         Env.shared.collectionValue = sum
+        let sumValue = self.walletsBalance + sum
+        self.setSumText(sumEth: sumValue, sumUsd: sumValue * self.ethPrice)
     }
     
     enum Tendency {
@@ -365,6 +365,15 @@ class StatusBarController {
         }
         DispatchQueue.main.async {
             self.ethPriceText?.button?.attributedTitle = str
+        }
+    }
+    
+    func setSumText(sumEth: Double, sumUsd: Double) {
+        let str = NSMutableAttributedString(string: "", attributes: self.fatAttribute)
+        str.append(NSAttributedString(string: "Sum: ", attributes: self.fatAttribute))
+        str.append(NSAttributedString(string: " \(String(format: "%.4f", sumEth)) ETH / \(String(format: "%.2f", sumUsd)) USD  ", attributes: self.regularAttribute))
+        DispatchQueue.main.async {
+            self.sumListText?.button?.attributedTitle = str
         }
     }
     

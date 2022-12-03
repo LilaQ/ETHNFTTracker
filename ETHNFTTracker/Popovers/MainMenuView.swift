@@ -24,6 +24,11 @@ struct MainMenuView: View {
     @AppStorage("hiddenCollections") var hiddenCollection: [String] = []
     @State var selected: Set<String> = Set<String>()
     @State var newWallet: String = ""
+    
+    //  settings
+    @AppStorage("showSum") var showSum: Bool = false
+    @AppStorage("showSumOnlyEth") var showSumOnlyEth: Bool = false
+    
     var statusBarController: StatusBarController
     
     var body: some View {
@@ -69,22 +74,32 @@ struct MainMenuView: View {
                 .padding(.top, 10)
                 .font(.callout)
                 .foregroundColor(Color.gray)
-            ScrollView {
-                VStack {
-                    ForEach(hiddenCollection, id: \.self) { collectionAddress in
-                        HStack {
-                            Text(collectionAddress)
-                            Spacer()
-                            Image(systemName: "minus.circle.fill")
-                                .onTapGesture {
-                                    hiddenCollection.removeAll(where: { $0 == collectionAddress })
-                                }
-                        }
+            VStack {
+                ForEach(hiddenCollection, id: \.self) { collectionAddress in
+                    HStack {
+                        Text(collectionAddress)
+                        Spacer()
+                        Image(systemName: "minus.circle.fill")
+                            .onTapGesture {
+                                hiddenCollection.removeAll(where: { $0 == collectionAddress })
+                            }
                     }
                 }
             }
-            .frame(minHeight: 150)
-            .background(.red)
+            
+            Group {
+                Divider()
+                    .padding(.vertical, 10)
+                Text("Settings")
+                    .padding(.top, 10)
+                    .font(.callout)
+                    .foregroundColor(Color.gray)
+                Toggle("Show Wallet + NFT value sum", isOn: $showSum)
+                Toggle(isOn: $showSumOnlyEth) {
+                    Text("Show only ETH value")
+                }
+                .disabled(!showSum)
+            }
             
             Divider()
                 .padding(.vertical, 10)
