@@ -7,19 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0DBD88292A967F003E8E61 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0DBD87292A967F003E8E61 /* logo.png */; };
+		3D0DBD97292C68F2003E8E61 /* QTools in Frameworks */ = {isa = PBXBuildFile; productRef = 3D0DBD96292C68F2003E8E61 /* QTools */; };
+		3D0DBD99292DB149003E8E61 /* NFTBankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DBD98292DB149003E8E61 /* NFTBankAPI.swift */; };
 		3D3DC1AF291C8D79000C3263 /* ETHNFTTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1AE291C8D79000C3263 /* ETHNFTTrackerApp.swift */; };
 		3D3DC1B1291C8D79000C3263 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1B0291C8D79000C3263 /* ContentView.swift */; };
 		3D3DC1B3291C8D7A000C3263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3DC1B2291C8D7A000C3263 /* Assets.xcassets */; };
 		3D3DC1B6291C8D7A000C3263 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3DC1B5291C8D7A000C3263 /* Preview Assets.xcassets */; };
+		3D3DC1BE291C8DA2000C3263 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1BD291C8DA2000C3263 /* StatusBarController.swift */; };
+		3D3DC1C0291C8F5C000C3263 /* EnvObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1BF291C8F5C000C3263 /* EnvObject.swift */; };
+		3D3DC1C2291C8FF5000C3263 /* EtherscanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1C1291C8FF5000C3263 /* EtherscanAPI.swift */; };
+		3D3DC1C4291C98E4000C3263 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1C3291C98E4000C3263 /* MainMenuView.swift */; };
+		3D3DC1C9291D86B8000C3263 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 3D3DC1C8291D86B8000C3263 /* Charts */; };
+		3D3DC1CB291D888E000C3263 /* EthPriceHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1CA291D888E000C3263 /* EthPriceHistoryView.swift */; };
+		3D3DC1CD291D8E94000C3263 /* CustomAxisLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1CC291D8E94000C3263 /* CustomAxisLabel.swift */; };
+		3D3DC1D0291D9F21000C3263 /* BlockdeamonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1CF291D9F21000C3263 /* BlockdeamonAPI.swift */; };
+		3D3DC1D3291DA3A7000C3263 /* NFTListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1D2291DA3A7000C3263 /* NFTListView.swift */; };
+		3D3DC1D8291DBB3E000C3263 /* CryptoCompareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1D7291DBB3E000C3263 /* CryptoCompareAPI.swift */; };
+		3D3DC1DA291E5276000C3263 /* AlchemyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DC1D9291E5276000C3263 /* AlchemyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0DBD87292A967F003E8E61 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		3D0DBD94292C687B003E8E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3D0DBD98292DB149003E8E61 /* NFTBankAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTBankAPI.swift; sourceTree = "<group>"; };
 		3D3DC1AB291C8D79000C3263 /* ETHNFTTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETHNFTTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3DC1AE291C8D79000C3263 /* ETHNFTTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETHNFTTrackerApp.swift; sourceTree = "<group>"; };
 		3D3DC1B0291C8D79000C3263 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D3DC1B2291C8D7A000C3263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D3DC1B5291C8D7A000C3263 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D3DC1B7291C8D7A000C3263 /* ETHNFTTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ETHNFTTracker.entitlements; sourceTree = "<group>"; };
+		3D3DC1BD291C8DA2000C3263 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		3D3DC1BF291C8F5C000C3263 /* EnvObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvObject.swift; sourceTree = "<group>"; };
+		3D3DC1C1291C8FF5000C3263 /* EtherscanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtherscanAPI.swift; sourceTree = "<group>"; };
+		3D3DC1C3291C98E4000C3263 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		3D3DC1CA291D888E000C3263 /* EthPriceHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthPriceHistoryView.swift; sourceTree = "<group>"; };
+		3D3DC1CC291D8E94000C3263 /* CustomAxisLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAxisLabel.swift; sourceTree = "<group>"; };
+		3D3DC1CF291D9F21000C3263 /* BlockdeamonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockdeamonAPI.swift; sourceTree = "<group>"; };
+		3D3DC1D2291DA3A7000C3263 /* NFTListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTListView.swift; sourceTree = "<group>"; };
+		3D3DC1D7291DBB3E000C3263 /* CryptoCompareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareAPI.swift; sourceTree = "<group>"; };
+		3D3DC1D9291E5276000C3263 /* AlchemyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlchemyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0DBD97292C68F2003E8E61 /* QTools in Frameworks */,
+				3D3DC1C9291D86B8000C3263 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +65,7 @@
 		3D3DC1A2291C8D79000C3263 = {
 			isa = PBXGroup;
 			children = (
+				3D0DBD87292A967F003E8E61 /* logo.png */,
 				3D3DC1AD291C8D79000C3263 /* ETHNFTTracker */,
 				3D3DC1AC291C8D79000C3263 /* Products */,
 			);
@@ -52,11 +82,17 @@
 		3D3DC1AD291C8D79000C3263 /* ETHNFTTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3D0DBD94292C687B003E8E61 /* Info.plist */,
+				3D3DC1D1291DA382000C3263 /* Popovers */,
+				3D3DC1CE291D9F10000C3263 /* APIs */,
 				3D3DC1AE291C8D79000C3263 /* ETHNFTTrackerApp.swift */,
 				3D3DC1B0291C8D79000C3263 /* ContentView.swift */,
 				3D3DC1B2291C8D7A000C3263 /* Assets.xcassets */,
 				3D3DC1B7291C8D7A000C3263 /* ETHNFTTracker.entitlements */,
 				3D3DC1B4291C8D7A000C3263 /* Preview Content */,
+				3D3DC1BD291C8DA2000C3263 /* StatusBarController.swift */,
+				3D3DC1BF291C8F5C000C3263 /* EnvObject.swift */,
+				3D3DC1CC291D8E94000C3263 /* CustomAxisLabel.swift */,
 			);
 			path = ETHNFTTracker;
 			sourceTree = "<group>";
@@ -67,6 +103,28 @@
 				3D3DC1B5291C8D7A000C3263 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3D3DC1CE291D9F10000C3263 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				3D3DC1C1291C8FF5000C3263 /* EtherscanAPI.swift */,
+				3D3DC1CF291D9F21000C3263 /* BlockdeamonAPI.swift */,
+				3D3DC1D7291DBB3E000C3263 /* CryptoCompareAPI.swift */,
+				3D3DC1D9291E5276000C3263 /* AlchemyAPI.swift */,
+				3D0DBD98292DB149003E8E61 /* NFTBankAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		3D3DC1D1291DA382000C3263 /* Popovers */ = {
+			isa = PBXGroup;
+			children = (
+				3D3DC1C3291C98E4000C3263 /* MainMenuView.swift */,
+				3D3DC1CA291D888E000C3263 /* EthPriceHistoryView.swift */,
+				3D3DC1D2291DA3A7000C3263 /* NFTListView.swift */,
+			);
+			path = Popovers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +143,10 @@
 			dependencies = (
 			);
 			name = ETHNFTTracker;
+			packageProductDependencies = (
+				3D3DC1C8291D86B8000C3263 /* Charts */,
+				3D0DBD96292C68F2003E8E61 /* QTools */,
+			);
 			productName = ETHNFTTracker;
 			productReference = 3D3DC1AB291C8D79000C3263 /* ETHNFTTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +175,10 @@
 				Base,
 			);
 			mainGroup = 3D3DC1A2291C8D79000C3263;
+			packageReferences = (
+				3D3DC1C7291D86B8000C3263 /* XCRemoteSwiftPackageReference "swiftui-charts" */,
+				3D0DBD95292C68F2003E8E61 /* XCRemoteSwiftPackageReference "QTools" */,
+			);
 			productRefGroup = 3D3DC1AC291C8D79000C3263 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D3DC1B6291C8D7A000C3263 /* Preview Assets.xcassets in Resources */,
+				3D0DBD88292A967F003E8E61 /* logo.png in Resources */,
 				3D3DC1B3291C8D7A000C3263 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +206,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3DC1DA291E5276000C3263 /* AlchemyAPI.swift in Sources */,
+				3D3DC1CD291D8E94000C3263 /* CustomAxisLabel.swift in Sources */,
+				3D3DC1C4291C98E4000C3263 /* MainMenuView.swift in Sources */,
+				3D3DC1C2291C8FF5000C3263 /* EtherscanAPI.swift in Sources */,
 				3D3DC1B1291C8D79000C3263 /* ContentView.swift in Sources */,
+				3D3DC1CB291D888E000C3263 /* EthPriceHistoryView.swift in Sources */,
+				3D0DBD99292DB149003E8E61 /* NFTBankAPI.swift in Sources */,
+				3D3DC1D0291D9F21000C3263 /* BlockdeamonAPI.swift in Sources */,
+				3D3DC1D8291DBB3E000C3263 /* CryptoCompareAPI.swift in Sources */,
+				3D3DC1BE291C8DA2000C3263 /* StatusBarController.swift in Sources */,
+				3D3DC1C0291C8F5C000C3263 /* EnvObject.swift in Sources */,
 				3D3DC1AF291C8D79000C3263 /* ETHNFTTrackerApp.swift in Sources */,
+				3D3DC1D3291DA3A7000C3263 /* NFTListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +352,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ETHNFTTracker/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +380,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ETHNFTTracker/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +416,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D0DBD95292C68F2003E8E61 /* XCRemoteSwiftPackageReference "QTools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LilaQ/QTools";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		3D3DC1C7291D86B8000C3263 /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D0DBD96292C68F2003E8E61 /* QTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D0DBD95292C68F2003E8E61 /* XCRemoteSwiftPackageReference "QTools" */;
+			productName = QTools;
+		};
+		3D3DC1C8291D86B8000C3263 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D3DC1C7291D86B8000C3263 /* XCRemoteSwiftPackageReference "swiftui-charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D3DC1A3291C8D79000C3263 /* Project object */;
 }
